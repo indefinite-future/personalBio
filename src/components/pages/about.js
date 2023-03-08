@@ -4,7 +4,7 @@ import React from "react";
 
 const About = () => {
     return (
-        <Box as="main" pb={8}>
+        <Box as="about" pb={8}>
             <head>
                 <meta name="viewpoint" content="width=device-width , initial-scale = 1" />
                 <title> Indefinite Future - Homepage</title>

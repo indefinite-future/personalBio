@@ -1,35 +1,34 @@
-import { Box, Flex, Text, useColorMode, useColorModeValue, IconButton } from '@chakra-ui/react';
-import { HamburgerIcon } from '@chakra-ui/icons'
-import { BrowserRouter as Router, Route, Link, Routes } from "react-router-dom";
-import { FaGithub } from "react-icons/fa";
-import Main from "./pages/main";
-import About from "./pages/about";
-import NotFound from "./pages/404NotFound";
+import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react';
+import { Link } from "react-router-dom";
+//import Favicon from './icon.png';
 import HomeButton from './HomeIcon';
 import ThemeToggleButton from './toggleColorMode';
 import AboutButton from './AboutIcon';
+import GitHubIcon from './GitHubIcon';
+import MyMenuIcon from './MenuIcon';
 
 export default function Navbar() {
-    const bg = { light: "gray.100", dark: "gray.900" };
-    const { colorMode } = useColorMode();
+    // const bg = { light: "gray.100", dark: "gray.900" };
+    // const { colorMode } = useColorMode();
     const color = useColorModeValue('gray.800', 'white');
     const borderColor = useColorModeValue('gray.100', 'gray.700');
 
     return (
-        <Box borderBottom="1px" borderColor={borderColor}>
-            <Flex
-                alignItems="center"
-                justifyContent="space-between"
-                maxW="3xl"
-                mx="auto"
-                py={1}
-                px={1}
-            >
-                <Text fontWeight="bold" fontSize="xl" color={color}>
-                    Indefinite Future
-                </Text>
+        <nav className='Nav'>
+            <Box borderBottom="1px" borderColor={borderColor}>
+                <Flex
+                    alignItems="center"
+                    justifyContent="space-between"
+                    maxW="3xl"
+                    mx="auto"
+                    py={1}
+                    px={1}
+                >
+                    {/* <img src='./icon.png' /> */}
+                    <Text fontWeight="bold" fontSize="xl" color={color}>
+                        Indefinite Future
+                    </Text>
 
-                <Router>
                     <Flex alignItems="center" justifyContent="space-between" p={1}>
                         <Link to="/">
                             <HomeButton />
@@ -38,36 +37,14 @@ export default function Navbar() {
                             <AboutButton />
                         </Link>
                         <a href="https://github.com/indefinite-future">
-                            <IconButton
-                                icon={<FaGithub />}
-                                variant="ghost"
-                                color={color[colorMode]}
-                                _hover={{ bg: bg[colorMode] }}
-                                ml={4}
-                                mr={4}
-                                m={2}
-                            ></IconButton>
+                            <GitHubIcon />
                         </a>
 
-                        <IconButton
-                            aria-label="Toggle menu"
-                            icon={<HamburgerIcon />}
-                            variant="ghost"
-                            color={color[colorMode]}
-                            _hover={{ bg: bg[colorMode] }}
-                            ml={4}
-                            mr={4}
-                            m={2}
-                        ></IconButton>
+                        <MyMenuIcon />
                         <ThemeToggleButton />
                     </Flex>
-                    <Routes>
-                        <Route exact path="/" component={Main} />
-                        <Route exact path="/about" component={About} />
-                        <Route component={NotFound} />
-                    </Routes>
-                </Router>
-            </Flex>
-        </Box>
+                </Flex>
+            </Box >
+        </nav>
     );
 }
