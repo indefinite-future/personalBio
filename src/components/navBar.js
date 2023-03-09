@@ -1,6 +1,5 @@
-import { Box, Flex, Text, useColorModeValue } from '@chakra-ui/react';
+import { Box, Flex, Text, useColorModeValue, Image } from '@chakra-ui/react';
 import { Link } from "react-router-dom";
-//import Favicon from './icon.png';
 import HomeButton from './HomeIcon';
 import ThemeToggleButton from './toggleColorMode';
 import AboutButton from './AboutIcon';
@@ -24,7 +23,7 @@ export default function Navbar() {
                     py={1}
                     px={1}
                 >
-                    {/* <img src='./icon.png' /> */}
+                    <Image src='./icon.png' boxSize="32px" mr={-60} mt="-2px" />
                     <Text fontWeight="bold" fontSize="xl" color={color}>
                         Indefinite Future
                     </Text>
@@ -45,6 +44,6 @@ export default function Navbar() {
                     </Flex>
                 </Flex>
             </Box >
-        </nav>
+        </nav >
     );
 }

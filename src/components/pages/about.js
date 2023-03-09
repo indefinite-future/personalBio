@@ -1,5 +1,5 @@
-// About.jsx
-import { Box, Flex, Container } from "@chakra-ui/react";
+// about.js
+import { Box, Flex, Container, Heading, Text } from "@chakra-ui/react";
 import React from "react";
 
 const About = () => {
@@ -7,7 +7,7 @@ const About = () => {
         <Box as="about" pb={8}>
             <head>
                 <meta name="viewpoint" content="width=device-width , initial-scale = 1" />
-                <title> Indefinite Future - Homepage</title>
+                <title> Indefinite Future - About me</title>
             </head>
 
             <Container maxW="Container.md" pt={14}>
@@ -20,8 +20,15 @@ const About = () => {
                     px={1}
                 >
                     <div className="about">
-                        <h1>About Page</h1>
-                        <p>This is the about page of my app.</p>
+                        <Box maxW="32rem">
+                            <Heading mb={4}>
+                                About me
+                            </Heading>
+
+                            <Text fontSIze='xl'>
+                                I am curently a year 3 student at Hong Kong Baptist University studing computer science.
+                            </Text>
+                        </Box>
                     </div>
                 </Flex>
             </Container>
