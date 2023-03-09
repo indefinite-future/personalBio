@@ -6,10 +6,9 @@ This project was created with [Create React App](https://github.com/facebook/cre
 
 In the project, I had use:
 
-<ul>
-<li> [React.js](https://reactjs.org/) - A JavaScript library for building user interfaces</li>
-<li> [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React</li>
-<ul>
+- [React](https://reactjs.org/) - A JavaScript library for building user interfaces
+
+- [Chakra UI](https://chakra-ui.com/) - A simple, modular and accessible component library for React
 
 ## Project structure
 
