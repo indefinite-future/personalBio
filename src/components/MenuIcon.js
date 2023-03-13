@@ -1,21 +1,25 @@
 import { useState } from "react";
-import { useColorMode, IconButton, useColorModeValue, MenuButton } from "@chakra-ui/react";
-import { HamburgerIcon } from "@chakra-ui/icons";
-import { Menu, MenuList, MenuItem, MenuDivider, } from '@chakra-ui/react'
+import { useColorMode, IconButton, useColorModeValue, MenuButton, MenuOptionGroup, MenuDivider } from "@chakra-ui/react";
+import { Menu, MenuList, MenuItem } from '@chakra-ui/react'
+import { BsInstagram, BsLinkedin, BsEnvelope, BsLink45Deg,BsGithub } from "react-icons/bs";
 
-function MyMenuButton() {
+
+export default function MyMenuButton() {
     const { colorMode } = useColorMode();
     const bg = { light: "gray.100", dark: "gray.900" };
     const color = useColorModeValue('gray.800', 'white');
     const [isOpen, setIsOpen] = useState(false);
 
     return (
+        isOpen,
+        setIsOpen,
+        useState,
         <>
             <Menu>
                 <MenuButton
                     as={IconButton}
                     aria-label="Toggle menu"
-                    icon={<HamburgerIcon />}
+                    icon={<BsLink45Deg style={{ fontSize: "1.5rem" }} />}
                     variant="ghost"
                     color={color[colorMode]}
                     _hover={{ bg: bg[colorMode] }}
@@ -25,15 +29,16 @@ function MyMenuButton() {
                     onClick={() => setIsOpen(!isOpen)}
                 />
                 <MenuList>
-                    <MenuItem>Item 1</MenuItem>
-                    <MenuItem>Item 2</MenuItem>
-                    <MenuDivider />
-                    <MenuItem>Item 3</MenuItem>
+                    <MenuOptionGroup title="Contact" >
+                        <MenuItem as='a' href='mailto:alanhtt0414@gmail.com' icon={<BsEnvelope />}>Email</MenuItem>
+                        <MenuItem as='a' href='https://www.instagram.com/indefinitefuture/' icon={<BsInstagram />}>Instagram</MenuItem>
+                        <MenuItem as='a' href='https://www.linkedin.com/in/taktingho414' icon={<BsLinkedin />}>LinkedIn</MenuItem>
+                        <MenuDivider />
+                        <MenuItem as='a' href='https://github.com/indefinite-future/personalBio' icon={<BsGithub />}>Github source code</MenuItem>
+                    </MenuOptionGroup>
                 </MenuList>
             </Menu>
         </>
 
     )
 }
-
-export default MyMenuButton;
