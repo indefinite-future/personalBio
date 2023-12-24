@@ -6,8 +6,9 @@ import Main from "./components/pages/main";
 import About from "./components/pages/about";
 import NotFound from "./components/pages/404NotFound";
 import { Route, Routes } from "react-router-dom";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
-const Website = () => {
+const App = () => {
   return (
     <ChakraProvider>
       <Navbar />
@@ -17,9 +18,10 @@ const Website = () => {
           <Route path="/about" element={<About />} />
           <Route component={NotFound} />
         </Routes>
+        <SpeedInsights />
       </div>
     </ChakraProvider>
   );
 };
 
-export default Website;
+export default App;
