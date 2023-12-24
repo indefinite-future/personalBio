@@ -1,12 +1,14 @@
 // main.js
-import { Button, Box, Container, Flex, Heading, Text } from '@chakra-ui/react'
+import { Button, Stack, Image, Box, Container, Flex, Heading, Text } from '@chakra-ui/react'
+import React from 'react'
+
 
 const Main = () => {
     return (
         <Box as="main" pb={8}>
             <head>
-                <meta name="viewpoint" content="width=device-width , initial-scale = 1" />
-                <title> Indefinite Future - Homepage</title>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>Indefinite Future</title>
             </head>
 
             <Container maxW="Container.md" pt={14}>
@@ -19,14 +21,35 @@ const Main = () => {
                     px={1}
                 >
                     <div className='main'>
-                        <Box maxW="32rem">
+                        <Box maxW="3xl">
                             <Heading mb={4}>
-                                A computer science student
+                                Hello, I'm Alan 👋🏻
                             </Heading>
-                            
+
                             <Text fontSize="xl">
-                                who look for jobs and friends.
+                                I'm a senior student studying computer science in HKBU. This website hosts some of the projects worked on while studying at HKBU.
                             </Text>
+
+                            {/* Education */}
+                            <Heading>
+                                Education
+                            </Heading>
+
+                            <Stack direction="row" spacing={2}>
+                                <Box>
+                                    <Image
+                                        src='hkbu.png'
+                                        alt='hkbu icon'
+                                        fallbackSrc='https://via.placeholder.com/170' />
+                                </Box>
+                                <Stack direction="column" spacing={0}>
+                                    <h2>BSc in Computer Science</h2>
+                                    <h3>Hong Kong Baptist University</h3>
+                                    <h3>September 2020 - Present</h3>
+                                </Stack>
+                            </Stack>
+
+
                             <Button size="lg" colorScheme="green" mt="24px">
                                 Contact me
                             </Button>
