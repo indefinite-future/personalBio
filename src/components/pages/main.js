@@ -1,6 +1,7 @@
 // main.js
 import { Button, Stack, Image, Box, Container, Flex, Heading, Text } from '@chakra-ui/react'
 import React from 'react'
+import Project from './project'
 
 
 const Main = () => {
@@ -27,8 +28,10 @@ const Main = () => {
                             </Heading>
 
                             <Text fontSize="xl">
-                                I'm a senior student studying computer science in HKBU. This website hosts some of the projects worked on while studying at HKBU.
+                                I'm a senior student studying computer science in <a href="https://www.comp.hkbu.edu.hk/v1/" target="_blank" rel="noopener noreferrer">HKBU</a>. This website hosts some of the projects worked on while studying in university.
                             </Text>
+
+                            <br></br>
 
                             {/* Education */}
                             <Heading>
@@ -48,6 +51,12 @@ const Main = () => {
                                     <h3>September 2020 - Present</h3>
                                 </Stack>
                             </Stack>
+
+                            {/* Experience */}
+
+                            {/* Projects */}
+                            <Project />
+
 
 
                             <Button size="lg" colorScheme="green" mt="24px">
