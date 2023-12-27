@@ -1,7 +1,9 @@
 // main.js
-import { Button, Stack, Image, Box, Container, Flex, Heading, Text } from '@chakra-ui/react'
+import { Box, Container, Flex, Heading, Text, Link } from '@chakra-ui/react'
 import React from 'react'
+import Education from './education'
 import Project from './project'
+import '../../index.css'
 
 
 const Main = () => {
@@ -28,40 +30,24 @@ const Main = () => {
                             </Heading>
 
                             <Text fontSize="xl">
-                                I'm a senior student studying computer science in <a href="https://www.comp.hkbu.edu.hk/v1/" target="_blank" rel="noopener noreferrer">HKBU</a>. This website hosts some of the projects worked on while studying in university.
+                                I'm a senior student studying computer science in
+                                <Link href="https://www.comp.hkbu.edu.hk/v1/" color="blue" isExternal> HKBU</Link>.
+                                This website hosts some information about me and some of the projects worked on while studying in university.
                             </Text>
 
                             <br></br>
 
                             {/* Education */}
-                            <Heading>
-                                Education
-                            </Heading>
-
-                            <Stack direction="row" spacing={2}>
-                                <Box>
-                                    <Image
-                                        src='hkbu.png'
-                                        alt='hkbu icon'
-                                        fallbackSrc='https://via.placeholder.com/170' />
-                                </Box>
-                                <Stack direction="column" spacing={0}>
-                                    <h2>BSc in Computer Science</h2>
-                                    <h3>Hong Kong Baptist University</h3>
-                                    <h3>September 2020 - Present</h3>
-                                </Stack>
-                            </Stack>
+                            <Education />
 
                             {/* Experience */}
 
                             {/* Projects */}
                             <Project />
 
+                            {/* Footing */}
 
 
-                            <Button size="lg" colorScheme="green" mt="24px">
-                                Contact me
-                            </Button>
                         </Box>
                     </div>
                 </Flex>

@@ -1,5 +1,5 @@
-import { Box, Flex, useColorModeValue, Image, Text, useBreakpointValue } from '@chakra-ui/react';
-import { Link } from "react-router-dom";
+import { Box, Flex, useColorModeValue, Image, Text, useBreakpointValue, Link as ChakraLink } from '@chakra-ui/react';
+import { Link as ReactRouterLink } from "react-router-dom";
 import HomeButton from './icons/HomeIcon';
 import AboutButton from './icons/AboutIcon';
 import GitHubIcon from './icons/GitHubIcon';
@@ -8,12 +8,12 @@ import ThemeToggleButton from './toggleColorMode';
 
 export default function Navbar() {
     const color = useColorModeValue('gray.800', 'white');
-    const borderColor = useColorModeValue('gray.100', 'gray.700');
+    const borderColor = useColorModeValue('gray.200', 'gray.700');
     const isMobileView = useBreakpointValue({ base: true, md: false });
 
     return (
         <nav className='Nav'>
-            <Box borderBottom="1px" borderColor={borderColor}>
+            <Box borderBottom="1px" borderColor={borderColor} bg={useColorModeValue('white', 'gray.800')}>
                 <Flex
                     direction="row"
                     alignItems="center"
@@ -25,9 +25,9 @@ export default function Navbar() {
                     overflowX="auto"
                 >
                     {isMobileView ? (
-                        <Link to="/">
+                        <ChakraLink as={ReactRouterLink} to="/">
                             <Image src='./icon.png' boxSize="32px" ml={5} mt="-2px" />
-                        </Link>
+                        </ChakraLink>
                     ) : (
                         <Image src='./icon.png' boxSize="32px" mr={-60} mt="-2px" />
                     )}
@@ -40,16 +40,16 @@ export default function Navbar() {
 
                     <Flex alignItems="center" justifyContent="space-between" p={1}>
                         {!isMobileView && (
-                            <Link to="/">
+                            <ChakraLink as={ReactRouterLink} to="/">
                                 <HomeButton />
-                            </Link>
+                            </ChakraLink>
                         )}
-                        <Link to="/about">
+                        <ChakraLink as={ReactRouterLink} to="/about">
                             <AboutButton />
-                        </Link>
-                        <a href="https://github.com/indefinite-future">
+                        </ChakraLink>
+                        <ChakraLink href="https://github.com/indefinite-future" style={{ textDecoration: 'none' }} isExternal>
                             <GitHubIcon />
-                        </a>
+                        </ChakraLink>
 
                         <MyMenuIcon />
                         <ThemeToggleButton />
