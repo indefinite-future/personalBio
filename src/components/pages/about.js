@@ -27,18 +27,28 @@ const AllProject = () => {
         {
             title: "Inventory Management System (Kotlin)",
             description: "Project work for COMP4107. A android-based inventory management system using Kotlin, Jetpack Compose and Azure Cosmos DB",
-            url: "https://placehold.co/40x40"
+            url: "https://github.com/indefinite-future/COMP4107-Inventory-App"
         },
         {
             title: "Personal Bio Website",
             description: "Self project. A personal bio website built with React.js and Chakra UI, deployed on Vercel. Just for fun.",
-            url: "indefinite-future.vercel.app/"
+            url: "https://indefinite-future.vercel.app/"
         },
         {
             title: "Link in Bio",
             description: "Self project. A simple Link in bio that used as Linktree, deployed on Vercel. Just for fun.",
-            url: "links.indefinite-future.vercel.app/"
-        }
+            url: "https://links.indefinite-future.vercel.app/"
+        },
+        {
+            title: "Simplified League of Three Kingdoms",
+            description: "Project work for COMP4107. A simplified League of Three Kingdoms game built with Kotlin to demonstrate the design pattern.",
+            url: "https://github.com/UG-CS-HKBU/comp4107-spring2023-ltk-deadline-fighter"
+        },
+        {
+            title: "Number to Chinese numerals function",
+            description: "A javascript function to convert number to chinese numerals that used in bank system.",
+            url: "https://gist.github.com/indefinite-future/851e110d68ecd690e228868e75d077dd"
+        },
     ];
 
     return (

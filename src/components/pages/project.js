@@ -26,7 +26,7 @@ export default function Projects() {
         {
             title: "Inventory Management System (Kotlin)",
             description: "Project work for COMP4107. A android-based inventory management system using Kotlin, Jetpack Compose and Azure Cosmos DB",
-            url: "https://placehold.co/40x40"
+            url: "https://github.com/indefinite-future/COMP4107-Inventory-App"
         },
         {
             title: "Personal Bio Website",
