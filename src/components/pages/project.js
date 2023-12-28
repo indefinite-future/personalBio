@@ -1,5 +1,6 @@
 import { Box, Heading, Button, Divider, Link as ChakraLink, Text } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
+
 export default function Projects() {
     const projectsitem = [
         {
@@ -18,9 +19,9 @@ export default function Projects() {
             url: "https://github.com/indefinite-future/COMP4097-ASM2"
         },
         {
-            title: "Inventory Management System (Web)",
-            description: "Project work for COMP3047. A web-based inventory management system using Vuejs, Express.js and Azure Cosmos DB",
-            url: "https://placehold.co/40x40"
+            title: "Docker image for Alpine Linux with NoVnc",
+            description: "Self-study project. A Docker image with KDE plasma, x11VNC based on Alpine Linux, deployed on Docker Hub.",
+            url: "https://github.com/indefinite-future/Alpine-noVNC"
         },
         {
             title: "Inventory Management System (Kotlin)",
@@ -30,12 +31,12 @@ export default function Projects() {
         {
             title: "Personal Bio Website",
             description: "Self project. A personal bio website built with React.js and Chakra UI, deployed on Vercel. Just for fun.",
-            url: "https://placehold.co/40x40"
+            url: "https://indefinite-future.vercel.app/"
         },
         {
-            title: "Personal Bio Website",
-            description: "Self project. A personal bio website built with React.js and Chakra UI, deployed on Vercel. Just for fun.",
-            url: "https://placehold.co/40x40"
+            title: "Link in Bio",
+            description: "Self project. A simple Link in bio that used as Linktree, deployed on Vercel. Just for fun.",
+            url: "https://links.indefinite-future.vercel.app/"
         }
     ];
 

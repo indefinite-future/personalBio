@@ -6,7 +6,7 @@ export default function Education() {
             <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
                 <Heading>Education</Heading>
             </Box>
-            <Stack rounded='md' direction="row" spacing={2} _hover={{ boxShadow: 'xl' }}>
+            <Stack rounded='md' direction="row" spacing={2} _hover={{ boxShadow: '2xl' }}>
                 <Box boxSize="125px">
                     <Image
                         src='hkbu.png'
