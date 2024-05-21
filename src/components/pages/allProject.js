@@ -1,4 +1,4 @@
-// about.js
+// Allproject.js
 import { Box, Heading, Divider, Link as ChakraLink, Text } from "@chakra-ui/react";
 // import { Link as ReactRouterLink } from "react-router-dom";
 
@@ -52,8 +52,8 @@ const AllProject = () => {
     ];
 
     return (
-        <Box maxW="container.md" mx="auto" rounded='md'>
-            <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
+        <Box maxW='5xl' mx="auto" rounded='md'>
+            <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" pt={14} pb={1}>
                 <Heading>Projects</Heading>
             </Box>
             <Box >

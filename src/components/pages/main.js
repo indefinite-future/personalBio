@@ -8,23 +8,22 @@ import '../../index.css'
 
 const Main = () => {
     return (
-        <Box as="main" pb={8}>
+        <Box as="main" pb={'14'}>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Alan Ho</title>
             </head>
 
-            <Container maxW="Container.md" pt={14}>
+            <Container maxW="Container.md" >
                 <Flex
                     alignItems="center"
                     justifyContent="space-between"
                     maxW="5xl"
                     mx="auto"
                     py={1}
-                    px={1}
                 >
                     <div className='main'>
-                        <Box maxW="5xl">
+                        <Box maxW="5xl" pt={14} >
                             <Heading mb={4}>
                                 Hello, I'm Alan 👋🏻
                             </Heading>

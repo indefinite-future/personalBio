@@ -19,13 +19,14 @@ export default function MyMenuButton() {
                 <MenuButton
                     as={IconButton}
                     aria-label="Toggle menu"
-                    icon={<BsLink45Deg size="30" />}
+                    icon={<BsLink45Deg />}
                     variant="ghost"
                     color={color[colorMode]}
                     _hover={{ bg: bg[colorMode] }}
                     ml={4}
                     mr={4}
                     m={2}
+                    fontSize="24"
                     onClick={() => setIsOpen(!isOpen)}
                 />
                 <MenuList>

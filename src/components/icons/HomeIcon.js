@@ -9,15 +9,15 @@ function HomeButton() {
     return (
         <IconButton
             aria-label="route to main"
-            icon={<FaHome size={"30"} />}
+            icon={<FaHome />}
             variant="ghost"
             color={color[colorMode]}
             _hover={{ bg: bg[colorMode] }}
-            boxsize={10}
             mr={4}
             ml={4}
             m={2}
-        />
+            fontSize="24" // This is the size of the icon
+        ></IconButton >
     )
 }
 

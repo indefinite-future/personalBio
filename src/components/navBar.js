@@ -8,7 +8,7 @@ import ThemeToggleButton from './toggleColorMode';
 
 export default function Navbar() {
     const color = useColorModeValue('gray.800', 'white');
-    const borderColor = useColorModeValue('gray.200', 'gray.700');
+    const borderColor = useColorModeValue('gray.200', 'gray.200');
     const isMobileView = useBreakpointValue({ base: true, md: false });
 
     return (
@@ -34,7 +34,7 @@ export default function Navbar() {
                         )}
 
                         {!isMobileView && (
-                            <Text fontWeight="bold" fontSize="xl" ml={5} color={color}>
+                            <Text fontWeight="bold" fontSize='larger' ml={5} color={color}>
                                 Alan Ho
                             </Text>
                         )}
@@ -46,7 +46,7 @@ export default function Navbar() {
                                 <HomeButton />
                             </ChakraLink>
                         )}
-                        <ChakraLink as={ReactRouterLink} to="/about">
+                        <ChakraLink as={ReactRouterLink} to="/projects">
                             <AboutButton />
                         </ChakraLink>
                         <ChakraLink href="https://github.com/indefinite-future" style={{ textDecoration: 'none' }} isExternal>

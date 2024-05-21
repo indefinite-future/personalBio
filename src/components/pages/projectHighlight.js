@@ -66,7 +66,7 @@ function ProjectHighlight({ title, description, url, index }) {
             <Box display="flex" alignItems="center" spaceX={4} p={4} py={2}>
                 <Box>
                     <Text fontSize="lg" fontWeight="semibold">{title}</Text>
-                    <Text color="gray.600">{description}</Text>
+                    <Text >{description}</Text>
                 </Box>
             </Box>
         </ChakraLink>

@@ -17,10 +17,10 @@ export default function Education() {
                     />
                 </Box>
                 <Stack direction="column" spaceX={4} py={2} spacing={0}>
-                    <Text fontSize="lg" fontWeight="semibold">BSc in Computer Science</Text>
+                    <Text fontSize="lg" fontWeight="semibold">BSc (Hons.) in Computer Science</Text>
                     <Text fontSize="md" fontWeight="semibold"> - Computing and Software Technologies Concentration</Text>
                     <Text fontSize="lg" fontWeight="semibold">Hong Kong Baptist University</Text>
-                    <Text fontSize='sm' color="gray.600">September 2020 - Present</Text>
+                    <Text fontSize='sm' >September 2020 - Present</Text>
                 </Stack>
             </Stack>
         </Box >
