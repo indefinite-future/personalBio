@@ -2,7 +2,7 @@ import { Stack, Image, Box, Heading, Text } from '@chakra-ui/react'
 
 export default function Education() {
     return (
-        <Box maxW="container.md" mx="auto" rounded='md'>
+        <Box mx="auto" rounded='md'>
             <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
                 <Heading>Education</Heading>
             </Box>

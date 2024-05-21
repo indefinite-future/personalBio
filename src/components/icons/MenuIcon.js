@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useColorMode, IconButton, useColorModeValue, MenuButton, MenuOptionGroup, MenuDivider } from "@chakra-ui/react";
 import { Menu, MenuList, MenuItem } from '@chakra-ui/react'
-import { BsInstagram, BsLinkedin, BsEnvelope, BsLink45Deg,BsGithub } from "react-icons/bs";
+import { BsInstagram, BsLinkedin, BsEnvelope, BsLink45Deg, BsGithub } from "react-icons/bs";
 
 
 export default function MyMenuButton() {
@@ -19,7 +19,7 @@ export default function MyMenuButton() {
                 <MenuButton
                     as={IconButton}
                     aria-label="Toggle menu"
-                    icon={<BsLink45Deg style={{ fontSize: "1.5rem" }} />}
+                    icon={<BsLink45Deg size="30" />}
                     variant="ghost"
                     color={color[colorMode]}
                     _hover={{ bg: bg[colorMode] }}

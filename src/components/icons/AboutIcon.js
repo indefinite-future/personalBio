@@ -8,8 +8,8 @@ function AboutButton() {
 
     return (
         <IconButton
-            icon={<InfoIcon />}
             aria-label="route to about"
+            icon={<InfoIcon size="30" />}
             variant="ghost"
             color={color[colorMode]}
             _hover={{ bg: bg[colorMode] }}

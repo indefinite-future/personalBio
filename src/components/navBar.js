@@ -18,25 +18,27 @@ export default function Navbar() {
                     direction="row"
                     alignItems="center"
                     justifyContent="space-between"
-                    maxW="3xl"
+                    maxW="5xl"
                     mx="auto"
                     py={1}
                     px={1}
                     overflowX="auto"
                 >
-                    {isMobileView ? (
-                        <ChakraLink as={ReactRouterLink} to="/">
-                            <Image src='./icon.png' boxSize="32px" ml={5} mt="-2px" />
-                        </ChakraLink>
-                    ) : (
-                        <Image src='./icon.png' boxSize="32px" mr={-60} mt="-2px" />
-                    )}
+                    <Flex alignItems="center">
+                        {isMobileView ? (
+                            <ChakraLink as={ReactRouterLink} to="/">
+                                <Image src='./icon.png' boxSize="36px" ml={5} mt="-2px" />
+                            </ChakraLink>
+                        ) : (
+                            < Image src='./icon.png' boxSize="36px" mt="-2px" />
+                        )}
 
-                    {!isMobileView && (
-                        <Text fontWeight="bold" fontSize="xl" color={color}>
-                            Indefinite Future
-                        </Text>
-                    )}
+                        {!isMobileView && (
+                            <Text fontWeight="bold" fontSize="xl" ml={5} color={color}>
+                                Alan Ho
+                            </Text>
+                        )}
+                    </Flex>
 
                     <Flex alignItems="center" justifyContent="space-between" p={1}>
                         {!isMobileView && (

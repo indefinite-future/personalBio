@@ -2,7 +2,7 @@
 import { Box, Container, Flex, Heading, Text, Link } from '@chakra-ui/react'
 import React from 'react'
 import Education from './education'
-import Project from './project'
+import ProjectHighlight from './projectHighlight'
 import '../../index.css'
 
 
@@ -11,20 +11,20 @@ const Main = () => {
         <Box as="main" pb={8}>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <title>Indefinite Future</title>
+                <title>Alan Ho</title>
             </head>
 
             <Container maxW="Container.md" pt={14}>
                 <Flex
                     alignItems="center"
                     justifyContent="space-between"
-                    maxW="3xl"
+                    maxW="5xl"
                     mx="auto"
                     py={1}
                     px={1}
                 >
                     <div className='main'>
-                        <Box maxW="3xl">
+                        <Box maxW="5xl">
                             <Heading mb={4}>
                                 Hello, I'm Alan 👋🏻
                             </Heading>
@@ -43,7 +43,7 @@ const Main = () => {
                             {/* Experience */}
 
                             {/* Projects */}
-                            <Project />
+                            <ProjectHighlight />
 
                             {/* Footing */}
 

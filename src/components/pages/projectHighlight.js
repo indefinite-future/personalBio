@@ -41,7 +41,7 @@ export default function Projects() {
     ];
 
     return (
-        <Box maxW="container.md" mx="auto" rounded='md'>
+        <Box maxW="5xl " mx="auto" rounded='md'>
             <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
                 <Heading>Projects</Heading>
                 <ChakraLink as={ReactRouterLink} to="/about">
@@ -51,7 +51,7 @@ export default function Projects() {
             <Box >
                 {projectsitem.map((project, index) => (
                     <Box key={index} rounded="md" _hover={{ boxShadow: "2xl" }}>
-                        <Project {...project} index={index} />
+                        <ProjectHighlight {...project} index={index} />
                         <Divider borderColor="gray.200" />
                     </Box>
                 ))}
@@ -60,7 +60,7 @@ export default function Projects() {
     )
 }
 
-function Project({ title, description, url, index }) {
+function ProjectHighlight({ title, description, url, index }) {
     return (
         <ChakraLink href={url} style={{ textDecoration: 'none' }} isExternal key={index}>
             <Box display="flex" alignItems="center" spaceX={4} p={4} py={2}>

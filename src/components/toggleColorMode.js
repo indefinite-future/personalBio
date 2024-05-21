@@ -10,14 +10,14 @@ function ThemeToggleButton() {
     return (
         <IconButton
             aria-label="Toggle color mode"
-            icon={colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+            icon={colorMode === 'light' ? <MoonIcon size="30" /> : <SunIcon size="30" />}
+            variant="ghost"
             onClick={toggleColorMode}
             color={color[colorMode]}
             _hover={{ bg: bg[colorMode] }}
             ml={4}
             mr={4}
             m={2}
-            variant="ghost"
         />
     )
 }

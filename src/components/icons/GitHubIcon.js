@@ -8,14 +8,15 @@ function GitHubButton() {
 
     return (
         <IconButton
-            icon={<FaGithub />}
+            aria-label="route to GitHub"
+            icon={<FaGithub size={"30"} />}
             variant="ghost"
             color={color[colorMode]}
             _hover={{ bg: bg[colorMode] }}
             ml={4}
             mr={4}
             m={2}
-        ></IconButton>
+        ></IconButton >
     )
 }
 
