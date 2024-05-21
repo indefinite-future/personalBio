@@ -1,3 +1,5 @@
+// navBar.js
+
 import { Box, Flex, useColorModeValue, Image, Text, useBreakpointValue, Link as ChakraLink } from '@chakra-ui/react';
 import { Link as ReactRouterLink } from "react-router-dom";
 import HomeButton from './icons/HomeIcon';
@@ -13,7 +15,7 @@ export default function Navbar() {
 
     return (
         <nav className='Nav'>
-            <Box borderBottom="1px" borderColor={borderColor} bg={useColorModeValue('white', 'gray.800')}>
+            <Box pos='sticky' top={0} zIndex={10} borderBottom="1px" borderColor={borderColor} bg={useColorModeValue('white', 'gray.800')}>
                 <Flex
                     direction="row"
                     alignItems="center"

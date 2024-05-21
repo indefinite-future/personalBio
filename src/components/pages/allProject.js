@@ -1,9 +1,9 @@
-// Allproject.js
+// allProject.js
+
 import { Box, Heading, Divider, Link as ChakraLink, Text } from "@chakra-ui/react";
-// import { Link as ReactRouterLink } from "react-router-dom";
 
 const AllProject = () => {
-    const projectsitem = [
+    const projectsItem = [
         {
             title: "QuoteLens",
             description: "Final year project. A cross-platform mobile application, under development.",
@@ -15,7 +15,7 @@ const AllProject = () => {
             url: "https://github.com/indefinite-future/COMP4035"
         },
         {
-            title: "Moist detector with M5StickC plus and Earth sensor and visualized with swiftUI apps",
+            title: "Moist detector with M5StickC plus and Earth sensor and visualized with SwiftUI apps",
             description: "Project for COMP4097. A moisture detector with M5StickC plus and Earth sensor built on UIflow and visualized with swiftUI apps.",
             url: "https://github.com/indefinite-future/COMP4097-ASM2"
         },
@@ -31,7 +31,7 @@ const AllProject = () => {
         },
         {
             title: "Personal Bio Website",
-            description: "Self project. A personal bio website built with React.js and Chakra UI, deployed on Vercel. Just for fun.",
+            description: "Self project. A personal bio website built with React.js and Charkra UI, deployed on Vercel. Just for fun.",
             url: "https://indefinite-future.vercel.app/"
         },
         {
@@ -52,12 +52,12 @@ const AllProject = () => {
     ];
 
     return (
-        <Box maxW='5xl' mx="auto" rounded='md'>
-            <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" pt={14} pb={1}>
+        <Box maxW='5xl' mx="auto" rounded='md' alignContent={"center"} pos={"unset"} pb={'14'}>
+            <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
                 <Heading>Projects</Heading>
             </Box>
             <Box >
-                {projectsitem.map((project, index) => (
+                {projectsItem.map((project, index) => (
                     <Box key={index} rounded="md" _hover={{ boxShadow: "2xl" }}>
                         <Project {...project} index={index} />
                         <Divider borderColor="gray.200" />
@@ -74,7 +74,7 @@ function Project({ title, description, url, index }) {
             <Box display="flex" alignItems="center" spaceX={4} p={4} py={2}>
                 <Box>
                     <Text fontSize="lg" fontWeight="semibold">{title}</Text>
-                    <Text color="gray.600">{description}</Text>
+                    <Text >{description}</Text>
                 </Box>
             </Box>
         </ChakraLink>

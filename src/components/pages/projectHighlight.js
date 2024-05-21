@@ -2,7 +2,7 @@ import { Box, Heading, Button, Divider, Link as ChakraLink, Text } from "@chakra
 import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Projects() {
-    const projectsitem = [
+    const projectsItem = [
         {
             title: "QuoteLens",
             description: "Final year project. A cross-platform mobile application, under development.",
@@ -41,15 +41,15 @@ export default function Projects() {
     ];
 
     return (
-        <Box maxW="5xl " mx="auto" rounded='md'>
-            <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
+        <Box maxW="5xl " mx="auto" rounded='md' >
+            <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4} >
                 <Heading>Projects</Heading>
-                <ChakraLink as={ReactRouterLink} to="/about">
-                    <Button colorScheme="blue" variant="link" style={{ textDecoration: 'none' }}>View all</Button>
+                <ChakraLink as={ReactRouterLink} to="/projects">
+                    <Button colorScheme="blue" variant="link" pos={"inherit"} style={{ textDecoration: 'none' }}>View all</Button>
                 </ChakraLink>
             </Box>
             <Box >
-                {projectsitem.map((project, index) => (
+                {projectsItem.map((project, index) => (
                     <Box key={index} rounded="md" _hover={{ boxShadow: "2xl" }}>
                         <ProjectHighlight {...project} index={index} />
                         <Divider borderColor="gray.200" />

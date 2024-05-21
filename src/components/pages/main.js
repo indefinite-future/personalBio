@@ -22,33 +22,30 @@ const Main = () => {
                     mx="auto"
                     py={1}
                 >
-                    <div className='main'>
-                        <Box maxW="5xl" pt={14} >
-                            <Heading mb={4}>
-                                Hello, I'm Alan 👋🏻
-                            </Heading>
+                    <Box maxW="5xl" pt={14} >
+                        <Heading mb={4}>
+                            Hello, I'm Alan 👋🏻
+                        </Heading>
 
-                            <Text fontSize="xl">
-                                I'm a senior student studying computer science in
-                                <Link href="https://www.comp.hkbu.edu.hk/v1/" color="blue" isExternal> HKBU</Link>.
-                                This website hosts some information about me and some of the projects worked on while studying in university.
-                            </Text>
+                        <Text fontSize="xl">
+                            I'm a senior student studying computer science in <Link href="https://www.comp.hkbu.edu.hk/v1/" color="blue" isExternal>HKBU</Link>.
+                            This website hosts some information about me and some of the projects worked on while studying in university.
+                        </Text>
 
-                            <br></br>
+                        <br></br>
 
-                            {/* Education */}
-                            <Education />
+                        {/* Education */}
+                        <Education />
 
-                            {/* Experience */}
+                        {/* Experience */}
 
-                            {/* Projects */}
-                            <ProjectHighlight />
+                        {/* Projects */}
+                        <ProjectHighlight />
 
-                            {/* Footing */}
+                        {/* Footing */}
 
 
-                        </Box>
-                    </div>
+                    </Box>
                 </Flex>
             </Container>
         </Box>

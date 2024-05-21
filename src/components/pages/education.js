@@ -1,12 +1,14 @@
-import { Stack, Image, Box, Heading, Text } from '@chakra-ui/react'
+import { Stack, Image, Box, Heading, Text, useColorModeValue } from '@chakra-ui/react'
 
 export default function Education() {
+    const hoverBg = useColorModeValue('gray.100', 'gray.700');
+
     return (
         <Box mx="auto" rounded='md'>
             <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
                 <Heading>Education</Heading>
             </Box>
-            <Stack rounded='md' direction="row" spacing={2} _hover={{ boxShadow: '2xl' }}>
+            <Stack rounded='md' direction="row" spacing={2} _hover={{ backgroundColor: hoverBg }}>
                 <Box boxSize="125px">
                     <Image
                         src='hkbu.png'
