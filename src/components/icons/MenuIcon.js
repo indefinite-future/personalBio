@@ -6,7 +6,7 @@ import { BsInstagram, BsLinkedin, BsEnvelope, BsLink45Deg, BsGithub } from "reac
 
 export default function MyMenuButton() {
     const { colorMode } = useColorMode();
-    const bg = { light: "gray.100", dark: "gray.900" };
+    const bgColor = useColorModeValue('light.background', 'dark.background');
     const color = useColorModeValue('gray.800', 'white');
     const [isOpen, setIsOpen] = useState(false);
 
@@ -22,20 +22,20 @@ export default function MyMenuButton() {
                     icon={<BsLink45Deg />}
                     variant="ghost"
                     color={color[colorMode]}
-                    _hover={{ bg: bg[colorMode] }}
+                    _hover={{ bg: bgColor[colorMode] }}
                     ml={4}
                     mr={4}
                     m={2}
                     fontSize="24"
                     onClick={() => setIsOpen(!isOpen)}
                 />
-                <MenuList>
+                <MenuList bg={bgColor}>
                     <MenuOptionGroup title="Contact" >
-                        <MenuItem as='a' href='mailto:alanhtt0414@gmail.com' icon={<BsEnvelope />}>Email</MenuItem>
-                        <MenuItem as='a' href='https://www.instagram.com/indefinitefuture/' icon={<BsInstagram />}>Instagram</MenuItem>
-                        <MenuItem as='a' href='https://www.linkedin.com/in/taktingho414' icon={<BsLinkedin />}>LinkedIn</MenuItem>
+                        <MenuItem as='a' href='mailto:alanhtt0414@gmail.com' bg={bgColor} icon={<BsEnvelope />}>Email</MenuItem>
+                        <MenuItem as='a' href='https://www.instagram.com/indefinitefuture/' bg={bgColor} icon={<BsInstagram />}>Instagram</MenuItem>
+                        <MenuItem as='a' href='https://www.linkedin.com/in/taktingho414' bg={bgColor} icon={<BsLinkedin />}>LinkedIn</MenuItem>
                         <MenuDivider />
-                        <MenuItem as='a' href='https://github.com/indefinite-future/personalBio' icon={<BsGithub />}>Github source code</MenuItem>
+                        <MenuItem as='a' href='https://github.com/indefinite-future/personalBio' bg={bgColor} icon={<BsGithub />}>Github source code</MenuItem>
                     </MenuOptionGroup>
                 </MenuList>
             </Menu>

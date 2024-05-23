@@ -1,3 +1,5 @@
+// education.js
+
 import { Stack, Image, Box, Heading, Text, useColorModeValue } from '@chakra-ui/react'
 
 export default function Education() {

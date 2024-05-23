@@ -1,5 +1,6 @@
 // main.js
-import { Box, Container, Flex, Heading, Text, Link } from '@chakra-ui/react'
+
+import { Box, Container, Flex, Heading, Text, Link, useColorModeValue } from '@chakra-ui/react'
 import React from 'react'
 import Education from './education'
 import ProjectHighlight from './projectHighlight'
@@ -7,8 +8,12 @@ import '../../index.css'
 
 
 const Main = () => {
+    const linkColor = useColorModeValue('blue', 'cyan');
+    const bgColor = useColorModeValue('light.background', 'dark.background');
+    //const textColor = useColorModeValue('light.text', 'dark.text');
+
     return (
-        <Box as="main" pb={'14'}>
+        <Box as="main" pb={'14'} bg={bgColor}>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Alan Ho</title>
@@ -28,7 +33,7 @@ const Main = () => {
                         </Heading>
 
                         <Text fontSize="xl">
-                            I'm a senior student studying computer science in <Link href="https://www.comp.hkbu.edu.hk/v1/" color="blue" isExternal>HKBU</Link>.
+                            I'm a senior student studying computer science in <Link href="https://www.comp.hkbu.edu.hk/v1/" color={linkColor} isExternal>HKBU</Link>.
                             This website hosts some information about me and some of the projects worked on while studying in university.
                         </Text>
 

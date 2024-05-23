@@ -1,8 +1,11 @@
 // allProject.js
 
-import { Box, Heading, Divider, Link as ChakraLink, Text } from "@chakra-ui/react";
+import { Box, Heading, Divider, Link as ChakraLink, Text, useColorModeValue, VStack } from "@chakra-ui/react";
 
 const AllProject = () => {
+    const bgColor = useColorModeValue('light.background', 'dark.background');
+    //const textColor = useColorModeValue('light.text', 'dark.text');
+    const hoverBg = useColorModeValue('gray.100', 'gray.700');
     const projectsItem = [
         {
             title: "QuoteLens",
@@ -31,7 +34,7 @@ const AllProject = () => {
         },
         {
             title: "Personal Bio Website",
-            description: "Self project. A personal bio website built with React.js and Charkra UI, deployed on Vercel. Just for fun.",
+            description: "Self project. A personal bio website built with React.js and Chakra UI, deployed on Vercel. Just for fun.",
             url: "https://indefinite-future.vercel.app/"
         },
         {
@@ -52,17 +55,30 @@ const AllProject = () => {
     ];
 
     return (
-        <Box maxW='5xl' mx="auto" rounded='md' alignContent={"center"} pos={"unset"} pb={'14'}>
-            <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
-                <Heading>Projects</Heading>
-            </Box>
-            <Box >
-                {projectsItem.map((project, index) => (
-                    <Box key={index} rounded="md" _hover={{ boxShadow: "2xl" }}>
-                        <Project {...project} index={index} />
-                        <Divider borderColor="gray.200" />
-                    </Box>
-                ))}
+        <Box as="main" pb={'14'} bg={bgColor}>
+            <head>
+                <meta name="viewport" content="width=device-width, initial-scale=1" />
+                <title>Alan Ho - Projects</title>
+            </head>
+
+            <Box maxW='5xl' mx="auto" rounded='md' alignContent={"center"} pos={"unset"} pb={'14'} bg={bgColor}>
+                <Box display="flex" justifyContent="space-between" alignItems="center" pt={4}>
+                    <Heading>Projects</Heading>
+                </Box>
+                <Box display="flex" justifyContent="space-between" alignItems="center" borderBottom="2px" borderColor="gray.200" py={4}>
+                    <VStack align="start" spacing={2}>
+                        <Text fontSize="md">Here are some of the projects I have worked on. Click on the title to view the project.</Text>
+                        <Text fontSize="md">Note: Some of them maybe set as private repository.</Text>
+                    </VStack>
+                </Box>
+                <Box >
+                    {projectsItem.map((project, index) => (
+                        <Box key={index} rounded="md" _hover={{ backgroundColor: hoverBg }}>
+                            <Project {...project} index={index} />
+                            <Divider borderColor="gray.200" />
+                        </Box>
+                    ))}
+                </Box>
             </Box>
         </Box>
     )

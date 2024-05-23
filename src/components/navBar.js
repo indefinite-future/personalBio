@@ -7,15 +7,17 @@ import AboutButton from './icons/AboutIcon';
 import GitHubIcon from './icons/GitHubIcon';
 import MyMenuIcon from './icons/MenuIcon';
 import ThemeToggleButton from './toggleColorMode';
+//import theme from './theme';
 
 export default function Navbar() {
-    const color = useColorModeValue('gray.800', 'white');
+    const bgColor = useColorModeValue('light.background', 'dark.background');
+    const textColor = useColorModeValue('light.text', 'dark.text');
     const borderColor = useColorModeValue('gray.200', 'gray.200');
     const isMobileView = useBreakpointValue({ base: true, md: false });
 
     return (
         <nav className='Nav'>
-            <Box pos='sticky' top={0} zIndex={10} borderBottom="1px" borderColor={borderColor} bg={useColorModeValue('white', 'gray.800')}>
+            <Box pos='sticky' top={0} zIndex={10} borderBottom="1px" borderColor={borderColor} bg={bgColor}>
                 <Flex
                     direction="row"
                     alignItems="center"
@@ -36,7 +38,7 @@ export default function Navbar() {
                         )}
 
                         {!isMobileView && (
-                            <Text fontWeight="bold" fontSize='larger' ml={5} color={color}>
+                            <Text fontWeight="bold" fontSize='larger' ml={5} color={textColor}>
                                 Alan Ho
                             </Text>
                         )}

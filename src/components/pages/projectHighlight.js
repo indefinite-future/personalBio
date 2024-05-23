@@ -1,7 +1,10 @@
-import { Box, Heading, Button, Divider, Link as ChakraLink, Text } from "@chakra-ui/react";
+// projectHighlight.js
+
+import { useColorModeValue, Box, Heading, Button, Divider, Link as ChakraLink, Text } from "@chakra-ui/react";
 import { Link as ReactRouterLink } from "react-router-dom";
 
 export default function Projects() {
+    const hoverBg = useColorModeValue('gray.100', 'gray.700');
     const projectsItem = [
         {
             title: "QuoteLens",
@@ -50,7 +53,7 @@ export default function Projects() {
             </Box>
             <Box >
                 {projectsItem.map((project, index) => (
-                    <Box key={index} rounded="md" _hover={{ boxShadow: "2xl" }}>
+                    <Box key={index} rounded="md" _hover={{ backgroundColor: hoverBg }}>
                         <ProjectHighlight {...project} index={index} />
                         <Divider borderColor="gray.200" />
                     </Box>

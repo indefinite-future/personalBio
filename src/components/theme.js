@@ -1,11 +1,20 @@
 // theme.js
 
-import { DarkMode, LightMode, background, extendTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
+//import { menuTheme } from './menuTheme'
 
 const theme = extendTheme({
   config: {
     initialColorMode: 'light',
     useSystemColorMode: false
+  },
+  styles: {
+    global: (props) => ({
+      body: {
+        bg: props.colorMode === 'dark' ? 'dark.background' : 'light.background',
+        color: props.colorMode === 'dark' ? 'white' : 'black',
+      },
+    }),
   },
   fonts: {
     body: "Roboto, system-ui, sans-serif",
@@ -13,16 +22,20 @@ const theme = extendTheme({
     mono: "Menlo, monospace",
   },
   colors: {
-    background: {
-      LightMode: "#ffffff",
-      DarkMode: "#343a40",
+    light: {
+      background: "#ffffff",
+      text: "#111111",
+      // Define other colors for light mode here
     },
-    gray: {
-      500: "#6c757d",
-      100: "#f7fafc", // Change this to your desired light mode background color
+    dark: {
+      background: "#202020",
+      text: "#eeeeee",
+      // Define other colors for dark mode here
     },
-    white: "#ffffff" // Change this to your desired light mode text color
   },
+  // components: {
+  //   Menu: menuTheme,
+  // },
 })
 
 export default theme;
