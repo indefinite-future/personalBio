@@ -82,9 +82,9 @@ const AllProject = () => {
                         </Box>
                         <Box >
                             {projectsItem.map((project, index) => (
-                                <Box key={index} rounded="md" zIndex="base" _hover={{ backgroundColor: hoverBg }}>
+                                <Box key={index} rounded="md" _hover={{ backgroundColor: hoverBg }}>
                                     <Project {...project} index={index} />
-                                    <Divider zIndex="-1" borderColor="gray.200" />
+                                    <Divider borderColor="gray.200" />
                                 </Box>
                             ))}
                         </Box>

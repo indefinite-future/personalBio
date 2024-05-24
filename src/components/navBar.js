@@ -16,7 +16,7 @@ export default function Navbar() {
     const isMobileView = useBreakpointValue({ base: true, md: false });
 
     return (
-        <nav className='Nav'>
+        <nav className='Nav' style={{ zIndex: 9999 }} >
             <Box as='nav' zIndex={10} pos='sticky' top={0} bg={bgColor}>
                 <Flex
                     direction="row"
@@ -62,6 +62,6 @@ export default function Navbar() {
                     </Flex>
                 </Flex>
             </Box>
-        </nav>
+        </nav >
     );
 }
