@@ -12,12 +12,12 @@ import ThemeToggleButton from './toggleColorMode';
 export default function Navbar() {
     const bgColor = useColorModeValue('light.background', 'dark.background');
     const textColor = useColorModeValue('light.text', 'dark.text');
-    const borderColor = useColorModeValue('gray.200', 'gray.200');
+    //const borderColor = useColorModeValue('gray.200', 'gray.200');
     const isMobileView = useBreakpointValue({ base: true, md: false });
 
     return (
         <nav className='Nav'>
-            <Box pos='sticky' top={0} zIndex={10} borderBottom="1px" borderColor={borderColor} bg={bgColor}>
+            <Box as='nav' zIndex={10} pos='sticky' top={0} bg={bgColor}>
                 <Flex
                     direction="row"
                     alignItems="center"

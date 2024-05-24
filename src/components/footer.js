@@ -1,16 +1,16 @@
 // footer.js
 
-import { Center, Text } from '@chakra-ui/react'
+import { Box, Text } from '@chakra-ui/react'
 const year = new Date().getFullYear();
 const name = "";
 
 function footer() {
     return (
-        <Center>
+        <Box alignItems={'center'} opacity={0.4} fontSize={'sm'}>
             <footer>
                 <Text pb={4}>© {year} {name}. All rights reserved.</Text>
             </footer>
-        </Center>
+        </Box>
     );
 }
 

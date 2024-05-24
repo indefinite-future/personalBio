@@ -14,32 +14,29 @@ export default function MyMenuButton() {
         isOpen,
         setIsOpen,
         useState,
-        <>
-            <Menu>
-                <MenuButton
-                    as={IconButton}
-                    aria-label="Toggle menu"
-                    icon={<BsLink45Deg />}
-                    variant="ghost"
-                    color={color[colorMode]}
-                    _hover={{ bg: bgColor[colorMode] }}
-                    ml={4}
-                    mr={4}
-                    m={2}
-                    fontSize="24"
-                    onClick={() => setIsOpen(!isOpen)}
-                />
-                <MenuList bg={bgColor}>
-                    <MenuOptionGroup title="Contact" >
-                        <MenuItem as='a' href='mailto:alanhtt0414@gmail.com' bg={bgColor} icon={<BsEnvelope />}>Email</MenuItem>
-                        <MenuItem as='a' href='https://www.instagram.com/indefinitefuture/' bg={bgColor} icon={<BsInstagram />}>Instagram</MenuItem>
-                        <MenuItem as='a' href='https://www.linkedin.com/in/taktingho414' bg={bgColor} icon={<BsLinkedin />}>LinkedIn</MenuItem>
-                        <MenuDivider />
-                        <MenuItem as='a' href='https://github.com/indefinite-future/personalBio' bg={bgColor} icon={<BsGithub />}>Github source code</MenuItem>
-                    </MenuOptionGroup>
-                </MenuList>
-            </Menu>
-        </>
-
+        <Menu position="absolute" zIndex="2">
+            <MenuButton
+                as={IconButton}
+                aria-label="Toggle menu"
+                icon={<BsLink45Deg />}
+                variant="ghost"
+                color={color[colorMode]}
+                _hover={{ bg: bgColor[colorMode] }}
+                ml={4}
+                mr={4}
+                m={2}
+                fontSize="24"
+                onClick={() => setIsOpen(!isOpen)}
+            />
+            <MenuList bg={bgColor}>
+                <MenuOptionGroup title="Contact" >
+                    <MenuItem as='a' href='mailto:alanhtt0414@gmail.com' bg={bgColor} icon={<BsEnvelope />}>Email</MenuItem>
+                    <MenuItem as='a' href='https://www.instagram.com/indefinitefuture/' bg={bgColor} icon={<BsInstagram />}>Instagram</MenuItem>
+                    <MenuItem as='a' href='https://www.linkedin.com/in/taktingho414' bg={bgColor} icon={<BsLinkedin />}>LinkedIn</MenuItem>
+                    <MenuDivider />
+                    <MenuItem as='a' href='https://github.com/indefinite-future/personalBio' bg={bgColor} icon={<BsGithub />}>Github source code</MenuItem>
+                </MenuOptionGroup>
+            </MenuList>
+        </Menu>
     )
 }

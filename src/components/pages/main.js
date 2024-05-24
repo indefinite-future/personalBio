@@ -4,8 +4,6 @@ import { Box, Container, Flex, Heading, Text, Link, useColorModeValue } from '@c
 import React from 'react'
 import Education from './education'
 import ProjectHighlight from './projectHighlight'
-import '../../index.css'
-
 
 const Main = () => {
     const linkColor = useColorModeValue('blue', 'cyan');
@@ -13,13 +11,13 @@ const Main = () => {
     //const textColor = useColorModeValue('light.text', 'dark.text');
 
     return (
-        <Box as="main" pb={'14'} bg={bgColor}>
+        <Box as="main" pb={'14'} bg={bgColor} zIndex={1}>
             <head>
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
                 <title>Alan Ho</title>
             </head>
 
-            <Container maxW="Container.md" >
+            <Container maxW="5xl" >
                 <Flex
                     alignItems="center"
                     justifyContent="space-between"
